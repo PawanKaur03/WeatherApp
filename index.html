@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./weatherApp.css">
+</head>
+<body>
+    <div class="weather">
+        <form id="searchForm" class="searchField">
+            <input type="text" placeholder="Enter City Name">
+            <button type="submit" class="searchbutton">&#x1F50D</button>
+        </form>
+        <p class="errormsg" style=" display: none; margin: -7px 80px 75px;"></p>
+
+        <div class="information" style="display: none;">
+            <div class="info">
+            <img src="./cloud.gif" alt="Sunny Weather" id="weatherImage">
+            <p class="temperature">7&deg;C</p>
+            <p class="city">Toronto</p>
+            <p class="weatherCondition" style="font-size: medium; padding-top:-6px;">Clear</p>
+            </div>
+    
+            <div class="extrainfo">
+                <div class="humid">
+                    <img src="./humidity.png" alt="humidity">
+                    <div class="humiditycontent">
+                        <p class="humidityPercent">48%</p>
+                        <p>Humidity</p>
+                    </div>
+                </div>
+
+                <div class="humid">
+                    <img src="./wind.png" alt="wind speed">
+                    <div class="windcontent">
+                        <p class="windSpeed">10 km/h</p>
+                        <p>Wind Speed</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="./weather.js"></script>
+</body>
+</html>
