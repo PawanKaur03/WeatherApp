@@ -3,8 +3,7 @@ const appid = "4d638021d72d43c93e60f985b4fbf1d6";
 
 
         async function checkWeather(city) {
-            document.querySelector(".errormsg").style.display = "none";
-            document.querySelector(".information").style.display = "block";
+            
                 try {
                     const response = await fetch(apiurl + city + `&appid=${appid}`);
                     if (!response.ok) {
@@ -31,11 +30,13 @@ const appid = "4d638021d72d43c93e60f985b4fbf1d6";
                 }
                 else if (data.weather[0].main == "Mist" || data.weather[0].main == "Haze" || data.weather[0].main == "Fog") {
                     document.getElementById("weatherImage").src = "./mist.png"
+                    }
+                    document.querySelector(".errormsg").style.display = "none";
+                    document.querySelector(".information").style.display = "block";
                 }
-                }
-                catch(error){
-                    document.querySelector(".errormsg").style.display = "block";
+                catch (error) {
                     document.querySelector(".information").style.display = "none";
+                    document.querySelector(".errormsg").style.display = "block";
                     document.querySelector(".errormsg").innerHTML = "Please Enter Proper City Name";
                     document.querySelector(".errormsg").style.color = "Red";
                 }
